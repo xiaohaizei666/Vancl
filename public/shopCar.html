@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize_zh.css"/>
+    <link rel="stylesheet" href="css/shopCar.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <div id="header">
+        <img src="img/shopCar/vancl-logo.png" alt="">
+        <ul>
+            <li>您好,欢迎光临凡客诚品！</li>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="#">帮助中心</a></li>
+            </li>
+        </ul>
+    </div>
+    <div id="middle">
+        <div class="next">
+            <ul>
+                <li class="active">1.我的购物车</li>
+                <li>2.填写核对信息单</li>
+                <li>3.成功提交订单</li>
+            </ul>
+        </div>
+        <div class="cart-top">
+            <img src="img/shopCar/shop-car.png" alt="">
+            <h2>我的购物车</h2>
+            <p><span>温馨提示：</span>1.选购清单中的商品无法保留库存，请您及时结算。2.商品的价格和库存将以订单提交时为准。3.促销活动满减优惠将均摊至商品小计中。</p>
+        </div>
+        <div id="cart">
+            <table class="tab">
+                <thead>
+                    <tr>
+                        <th class="bar-title">
+                            <input type="checkbox" id="tit"/>
+                            <label for="tit">全选</label>
+                        </th>
+                        <th class="image">商品图片</th>
+                        <th class="name">商品名称</th>
+                        <th class="size">尺寸</th>
+                        <th class="price">单价</th>
+                        <th class="qty">数量</th>
+                        <th class="subtotal">小计</th>
+                        <th class="operate">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td class="image"><img src="img/shopCar/p1.png"/></td>
+                        <td>T恤 基础打底 吸汗速干 圆领 白色</td>
+                        <td>S</td>
+                        <td>￥58.00</td>
+                        <td><button>-</button><input type="text" value="1"/><button>+</button></td>
+                        <td>￥58.00</td>
+                        <td><a href="javascript:;">删除</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td class="image"><img src="img/shopCar/p2.jpg"/></td>
+                        <td>T恤 全棉舒适 素色基础 黑色</td>
+                        <td>XL</td>
+                        <td>￥38.00</td>
+                        <td><button>-</button><input type="text" value="1"/><button>+</button></td>
+                        <td>￥38.00</td>
+                        <td><a href="javascript:;">删除</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="bar">
+                <div class="bar-top">
+                    <input type="checkbox" id="tit2"/>
+                    <label for="tit2">全选</lable>
+                    <a href="javascript:;">删除</a>
+                </div>
+                <div class="bar-bottom">
+                    <p>产品金额总计(不含运费)：<span>￥0.00</span></p>
+                    <a href="javascript:;"><span>¥</span>去结算>></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/shopCar.js"></script>
+
+
+</body>
+</html>

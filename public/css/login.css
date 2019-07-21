@@ -1,0 +1,146 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:#b42025;
+}
+#container{
+    width:1200px;
+    margin:20px auto;
+}
+.top{
+    border-bottom: 1px solid #7a7f89;
+    padding-bottom: 10px;
+}
+
+.middle{
+    height:600px;
+    border-bottom:1px solid #7a7f89;
+    position: relative;
+}
+/*登录页面*/
+/* 登录左边图片 */
+.middle .left img{
+    width:465px;
+    height:352px;
+    position: absolute;
+    top:50%;
+    margin-top:-176px;
+    margin-left:100px;
+}
+/* 登录框 */
+.right_login{
+  width:400px;
+  height:400px;
+  text-align: center;
+	margin-right:100px;
+  margin-top:100px;
+  box-sizing: border-box;
+  float: right;
+}
+.right_login h2{
+    font-size: 24px;
+    color:#000;
+    margin-bottom:10px;
+}
+/*登录框内容*/
+.right_login .txt{
+  float:left;
+  overflow:hidden;
+  width:400px;
+  height:350px;
+  padding:20px 25px;
+  border:1px solid #cbcbcb;
+}
+/*用户登录*/
+.right_login .txt p{
+  font-size:20px;
+  color:#b42025;
+  font-weight: bold;
+  width: 350px;
+  height:40px;
+  line-height:40px;
+  border-bottom: 1px solid #cbcbcb;
+}
+.right_login .txt p span{
+  float: left;
+}
+/*新用户注册*/
+.right_login .txt p a{
+  float:right;
+}
+/*用户名和密码输入框*/
+.right_login .txt .text input{
+  border:1px solid #ddd;
+  padding:10px;
+  width:350px;
+  margin-top:20px;
+  outline: none;
+}
+/*自动登录*/
+.right_login .txt .chose{
+  height:30px;
+  font-size:16px;
+  margin:20px 0;
+  color:#b42025;
+  padding-bottom:20px;
+  border-bottom:1px solid #cbcbcb;
+}
+.right_login .txt .chose .login_s{
+  float: left;
+}
+.right_login .txt .chose .checkbox{
+  position:relative;
+  top:2px;
+}
+/*自动登录 忘记密码*/
+.right_login .txt .chose a{
+  float:right;
+}
+/*登录按钮*/
+.right_login .button_login input{
+  width:350px;
+  height:40px;
+  color:#fff;
+  background-color:#d21412;
+  border-radius:3px;
+  text-align:center;
+  line-height:35px;
+  font-weight:bold;
+  font-size:18px;
+  margin:0 auto;
+  border:none;
+  outline: none;
+}
+/*错误提示*/
+#showErrUname,#showErrUpwd{
+  color:#ff0000;
+  font-size:14px;
+  font-weight:bold;
+  width:260px;
+  height:30px;
+  line-height:30px;
+  padding-left:10px;
+  display:none;
+}
+#showErrUname{  
+  position:absolute;
+  top:370px;
+  right:185px;
+}
+#showErrUpwd{  
+  position:absolute;
+  top:440px;
+  right:185px;
+}
+#showErrUname span,#showErrUpwd span{
+  vertical-align:middle;
+  color:#ff0000;
+  font-size:20px;
+  font-weight:bold;
+  padding-right:5px;
+}
+

@@ -1,0 +1,65 @@
+
+/*注册页面*/
+.right_reg{
+    width:400px;
+    height:500px;
+    text-align: center;
+    margin-top: 60px;
+    margin-right:100px;
+    float:right;
+}
+/*注册框样式*/
+.register{
+    width:400px;
+    height:460px;
+    margin-top:20px;
+    padding:20px;
+    box-sizing:border-box;
+    border: 1px solid #cbcbcb;
+}
+/*新用户注册 直接登录*/
+#reg p{
+    width:350px;
+    height:40px;
+    line-height: 40px;
+    color:#b42025;
+    font-size:20px;
+    font-weight: bold;
+    border-bottom: 1px solid #cbcbcb;
+    display:inline-block;
+}
+#reg p span{
+    float: left;
+}
+#reg p a{
+    font-size:20px;
+    color:#b42025;
+    float:right;
+}
+/*输入框设置*/
+.inputbox > input{
+    padding:10px;
+    width:350px;
+    margin-top:20px;
+    border-radius:3px;
+    border:1px solid #ddd;
+    outline:none;
+}
+/*注册按钮样式*/
+input[type="submit"]{
+    width:350px;
+    color:#fff;
+    border-radius:2px;
+    background-color:#d21412;
+    text-align:center;
+    line-height:20px;
+    font-weight:bold;
+    font-size:18px;
+}
+/*错误消息提示样式*/
+.inputbox > span{
+    color:#f00;
+    font-size:14px;
+    font-weight:bold;
+    display:none;
+}

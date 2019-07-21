@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize_zh.css"/>
+    <link rel="stylesheet" href="css/login_reg.css">
+</head>
+<body>
+    <div id="container">
+        <div class="top">
+            <a href="index.html">
+            <img src="img/header/logo.png" alt="">
+            </a>
+        </div>
+        <div class="middle">
+            <div class="left">
+                <img src="img/login_reg/login_Limg.jpg" alt="">
+            </div>
+            <div class="right">
+                <h2>欢迎来到凡客 Vancl</h2>
+                <div class="txt">
+                    <p>用户登录
+                        <span><a href="#">新用户注册</a></span>
+                    </p>
+                    <div class="text">
+                        <input type="text" id="uname" placeholder="请输入您的用户名">
+                    </div>
+                    <div class="text">
+                        <input type="text" id="upwd" placeholder="请输入您的密码">
+                    </div>
+                    <div class="chose">
+                        <input type="checkbox" class="checkbox" id="auto_login" value="0">
+                        <label for="auto_login">自动登录</label>
+                        <a href="#">忘记密码？</a>
+                    </div>
+                    <div class="button_login">
+                        <input type="submit" value="登 录" onclick="login()">
+                    </div>
+                </div>
+            </div>
+            <div class="right_reg">
+                    <h2>欢迎来到凡客 Vancl</h2>
+                    <div class="txt">
+                        <p>用户登录
+                            <span><a href="#">新用户注册</a></span>
+                        </p>
+                        <div class="text">
+                            <input type="text" id="uname" placeholder="请输入您的用户名">
+                        </div>
+                        <div class="text">
+                            <input type="text" id="upwd" placeholder="请输入您的密码">
+                        </div>
+                        <div class="chose">
+                            <input type="checkbox" class="checkbox" id="auto_login" value="0">
+                            <label for="auto_login">自动登录</label>
+                            <a href="#">忘记密码？</a>
+                        </div>
+                        <div class="button_login">
+                            <input type="submit" value="登 录" onclick="login()">
+                        </div>
+                    </div>
+                </div>
+            <!-- 错误提示 -->
+            <div id="showErrUname"><span>*</span>用户名不能为空</div>
+            <div id="showErrUpwd"><span>*</span>用户密码不能为空</div>
+        </div>
+
+    </div>
+</body>
+</html>
