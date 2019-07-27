@@ -11,12 +11,14 @@
 <body>
     <!-- 头部 -->
     <div id="header">
-        <img src="img/shopCar/vancl-logo.png" alt="">
+        <a href="index.html">
+          <img src="img/shopCar/vancl-logo.png" alt="">
+        </a>
         <ul>
             <li>您好,欢迎光临凡客诚品！</li>
-            <li><a href="#">登录</a></li>
-            <li><a href="#">注册</a></li>
-            <li><a href="#">帮助中心</a></li>
+            <li><a href="login-reg.html">登录</a></li>
+            <li><a href="login-reg.html">注册</a></li>
+            <li><a href="javascript:;">帮助中心</a></li>
             </li>
         </ul>
     </div>
@@ -33,13 +35,13 @@
             <h2>我的购物车</h2>
             <p><span>温馨提示：</span>1.选购清单中的商品无法保留库存，请您及时结算。2.商品的价格和库存将以订单提交时为准。3.促销活动满减优惠将均摊至商品小计中。</p>
         </div>
-        <div id="cart">
+        <div class="cartTable">
             <table class="tab">
                 <thead>
                     <tr>
                         <th class="bar-title">
-                            <input type="checkbox" id="tit"/>
-                            <label for="tit">全选</label>
+													<input type="checkbox" id="tit"/>
+													<label for="tit">全选</label>
                         </th>
                         <th class="image">商品图片</th>
                         <th class="name">商品名称</th>
@@ -57,7 +59,7 @@
                         <td>T恤 基础打底 吸汗速干 圆领 白色</td>
                         <td>S</td>
                         <td>￥58.00</td>
-                        <td><button>-</button><input type="text" value="1"/><button>+</button></td>
+                        <td><button>-</button><input type="text" value="1" readonly=true/><button>+</button></td>
                         <td>￥58.00</td>
                         <td><a href="javascript:;">删除</a></td>
                     </tr>
@@ -67,7 +69,7 @@
                         <td>T恤 全棉舒适 素色基础 黑色</td>
                         <td>XL</td>
                         <td>￥38.00</td>
-                        <td><button>-</button><input type="text" value="1"/><button>+</button></td>
+                        <td><button>-</button><input type="text" value="1" readonly=true/><button>+</button></td>
                         <td>￥38.00</td>
                         <td><a href="javascript:;">删除</a></td>
                     </tr>
@@ -86,8 +88,10 @@
             </div>
         </div>
     </div>
-    <script src="js/shopCar.js"></script>
-
-
+    <!-- 首页底部-->
+	<footer id="footer"></footer>
 </body>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/shopCar.js"></script>
+<script src="js/footer.js"></script>
 </html>
