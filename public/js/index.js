@@ -1,6 +1,7 @@
+// 轮播图
 var i=0;
 var LIWIDTH=1200;
-var DURATION=5000;
+var DURATION=500;
 var LICOUNT=5;
 var ulImgs=document.getElementById("ul-imgs");
 var ulIdxs=document.getElementById("ul-idxs");
@@ -90,4 +91,18 @@ ulIdxs.onclick=function(e){
     }
 }
 
-
+// 回到顶部
+var toTop=document.getElementById("toTop");
+var toTopLi=toTop.querySelector("ul>li.BackTop");
+toTopLi.onclick=function(e){
+    e.preventDefault();
+    window.scrollTo(0,0);
+}
+window.onscroll=function(){
+    var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+    if(scrollTop>=800){
+      toTop.className="show";
+    }else{
+			toTop.className="";
+    }
+}

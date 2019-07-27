@@ -44,7 +44,6 @@
 
   // 首次总计
   var tds=document.querySelectorAll("table>tbody>tr>td:nth-child(7)");
-  console.log(tds);
   //找到div.bar下的div.bar-bottom下的p下的span
   var span=document.querySelector("div.bar>div.bar-bottom>p>span");
   var total=0;
@@ -86,7 +85,6 @@
       /* 计算总计 */
       //找到table下tbody下tr的第7个td
       var tds=document.querySelectorAll("table>tbody>tr>td:nth-child(7)");
-      console.log(tds);
       //找到div.bar下的div.bar-bottom下的p下的span
       var span=document.querySelector("div.bar>div.bar-bottom>p>span");
       var total=0;
@@ -94,6 +92,19 @@
         total+=parseFloat(td.innerHTML.slice(1));
       }
       span.innerHTML=`¥${total.toFixed(2)}`;
+    }
+  }
+
+  // 删除行
+  var table=document.querySelector("table");
+  var as=document.querySelectorAll("table>tbody>tr>td:last-child a");
+  for(var a of as){
+    a.onclick=function(){
+      var a=this;
+      var tr=a.parentNode.parentNode;
+      if(confirm(`确认要删除该商品吗？`)){
+        table.deleteRow(tr.rowIndex);
+      }
     }
   }
 
