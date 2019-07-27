@@ -3,13 +3,13 @@
     margin: 0;
 }
 a{
-    color: #a4a4a4;
+    color: #808080;
     text-decoration: none;
 }
 ul{
     list-style-type: none;
 }
-footer{
+.footer{
     width:1200px;
     margin:0 auto;
 }
@@ -65,6 +65,9 @@ footer{
 #footer_middle ul li span{
     font-size:20px;
     color:#757575;
+}
+#footer_middle ul li a:hover{
+    color:#b5181d;
 }
 /*底部下部分*/
 #footer_bottom{

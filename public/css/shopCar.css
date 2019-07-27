@@ -7,16 +7,17 @@ body{
     width:1200px;
     margin:20px auto;
 }
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
 /* 头部 */
 #header{
     height:50px;
     border-bottom:1px solid #7a7f89;
-}
-ul{
-    list-style: none;
-}
-a{
-    text-decoration: none;
 }
 #header ul{
     float:right;
@@ -27,10 +28,18 @@ a{
     color:#808080;
     font-size:14px;
 }
+#header ul li:nth-child(2)::after{
+	content:"|";
+	color:#cecece;
+	padding-left:10px;
+}
 #header ul li a{
     color:#a10000;
 }
 /* 中间购物车部分 */
+#middle{
+	margin-bottom:20px;
+}
 #middle .next{
     margin-top: 20px;
     height:28px;
@@ -48,56 +57,56 @@ a{
 #middle .next ul li.active{
     color:#fff;
 }
-.cart-top{
+#middle .cart-top{
     margin:10px 0;
 }
-.cart-top img{
+#middle .cart-top img{
     float: left;
     margin-right: 20px;
 }
-.cart-top h2{
+#middle .cart-top h2{
     height:40px;
     line-height: 40px;
     margin-bottom:5px;
 }
-.cart-top p{
+#middle .cart-top p{
     font-size: 14px;
     color:#666;
 }
-.cart-top p span{
+#middle .cart-top p span{
     color:#a10000;
 }
 
 /*购物车表格*/
-#cart{
+#middle .cartTable{
     width:1200px;
 }
-#cart>table{
+#middle .cartTable>table{
     width:1200px;
     text-align:center;
     border:1px solid #000000;
     border-collapse: collapse;
 }
-#cart>table>thead>tr{
+#middle .cartTable>table>thead>tr{
     height:40px;
 }
 
-#cart>table>tbody{
+#middle .cartTable>table>tbody{
     color:#666;
     font-size: 14px;
 }
-#cart>table>tbody>tr{
+#middle .cartTable>table>tbody>tr{
     height:60px;
 }
-#cart>table>tbody>tr>td>a{
+#middle .cartTable>table>tbody>tr>td>a{
     color:#666;
 }
-#cart>table>tbody>tr>td>img{
+#middle .cartTable>table>tbody>tr>td>img{
     width:50px;
     height:50px;
     border: 1px solid #cecece;
 }
-#cart>table>tbody>tr>td>button{
+#middle .cartTable>table>tbody>tr>td>button{
     width:20px;
     height: 20px;
     text-align: center;
@@ -106,12 +115,12 @@ a{
     outline: none;
     margin:0 5px;
 }
-#cart input[type="checkbox"]{
+#middle .cartTable input[type="checkbox"]{
     width:15px;
     height:15px;
     vertical-align: middle;
 }
-#cart>table>tbody>tr>td>input[type="text"]{
+#middle .cartTable>table>tbody>tr>td>input[type="text"]{
     width:30px;
     height:20px;
     outline: none;
@@ -122,38 +131,38 @@ a{
 }
 
 /*总计部分*/
-#cart>.bar{
+#middle .cartTable>.bar{
     width:1200px;
     height:120px;
     margin-top: 10px;
     padding:20px;
     border:1px solid #cecece;
 }
-#cart>.bar>.bar-top{
+#middle .cartTable>.bar>.bar-top{
     margin-bottom:10px;
 }
-#cart>.bar>.bar-top a{
+#middle .cartTable>.bar>.bar-top a{
     color:#000;
     margin-left: 10px;
 }
-#cart>.bar>.bar-top a:hover{
+#middle .cartTable>.bar>.bar-top a:hover{
     color:#b5181d;
 }
-#cart>.bar>.bar-bottom{
+#middle .cartTable>.bar>.bar-bottom{
     height:50px;
     line-height: 50px;
 }
-#cart>.bar>.bar-bottom>p{
+#middle .cartTable>.bar>.bar-bottom>p{
     width:300px;
     font-size: 14px;
     float: left;
 }
-#cart>.bar>.bar-bottom>p>span{
+#middle .cartTable>.bar>.bar-bottom>p>span{
     color:#b5181d;
     font-size:24px;
     font-weight: bold;
 }
-#cart>.bar>.bar-bottom>a{
+#middle .cartTable>.bar>.bar-bottom>a{
     width:160px;
     height:50px;
     text-align: center;
@@ -165,7 +174,7 @@ a{
     display:inline-block;
     float:right;
 }
-#cart>.bar>.bar-bottom>a>span{
+#middle .cartTable>.bar>.bar-bottom>a>span{
     font-weight:bold;
     padding-right:10px;
 }

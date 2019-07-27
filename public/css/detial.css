@@ -1,5 +1,9 @@
 
-
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
 #main{
     width:1200px;
     margin:20px auto;
@@ -29,42 +33,42 @@
     color:#b5181d;
 }
 /* 商品标题 */
-.detial_title{
+#main .detial_title{
     height: 46px;
 }
-.detial_title h3{
+#main .detial_title h3{
     float: left;
     line-height: 46px;
     font-size:18px;
     color:#333;
 }
-.detial_title ul{
+#main .detial_title ul{
     line-height: 46px;
     float:right;
 }
-.detial_title ul li{
+#main .detial_title ul li{
     float:left;
     font-size: 16px;
     padding-right:10px;
 }
-.detial_title ul li:not(:last-child)::after{
+#main .detial_title ul li:not(:last-child)::after{
     content:"|";
     color:#cecece;
     padding-left:10px;
 }
 /* 商品介绍 */
-.detial_main{
+#main .detial_main{
     padding:30px 0;
     border-top:1px solid #cecece;
     border-bottom: 1px solid #cecece;
 }
-.detial_main::after{
+#main .detial_main::after{
     content: "";
     display:block;
     clear: both;
 }
 /* 左侧小图 */
-.detial_main .left ul{
+#main .detial_main .left ul{
     float:left;
     height:400px;
     list-style: none;
@@ -72,66 +76,71 @@
     flex-flow: column;
     justify-content: space-around;
 }
-.detial_main .left ul li{
+#main .detial_main .left ul li{
     width:68px;
     height:68px;
     border: 1px solid #cecece;
-    background: url("../img/detial/Simgs.jpg") ;
+    overflow: hidden;
 }
-.detial_main .left ul li:hover{
+#main .detial_main .left ul li:hover{
     border: 1px solid #b5181d;
 }
-.detial_main .left ul li:nth-child(2){
-    background: url("../img/detial/Simgs.jpg")0 -68px;
-}
-.detial_main .left ul li:nth-child(3){
-    background: url("../img/detial/Simgs.jpg")0 -136px;
-}
-.detial_main .left ul li:nth-child(4){
-    background: url("../img/detial/Simgs.jpg")0 -204px;
-}
-.detial_main .left ul li:last-child{
-    background: url("../img/detial/Simgs.jpg")0 -272px;
-}
 /* 中间大图 */
-.detial_main .center{
+#main .detial_main .center{
     float: left;
     width:400px;
     height: 400px;
     border:1px solid #cecece;
-    background: url("../img/detial/main.jpg") ;
     margin:0 50px;
+    overflow: hidden;
 }
 /* 右侧购买栏 */
-.right{
+#main .detial_main .right{
+    width:500px;
     height:400px;
+    float:right;
+    margin-right:100px;
 }
-.right p,.right ul{
+#main .detial_main .right p,
+#main .detial_main .right ul{
     color:#666;
     font-size:16px;
     margin-bottom: 20px;
 }
-.right p.price{
+/* 特惠价 */
+#main .detial_main .right p.price{
     color:#b5181d;
    
 }
-.right p.price span{
+#main .detial_main .right p.price span{
     font-size: 24px;
+    font-weight: bold;
 }
-.right ul{
+/* 颜色 */
+#main .detial_main .right p.color a{
+    margin-left:5px;
+    width:60px;
+    height:30px;
+    padding:5px;
+    text-align: center;
+    border:1px solid #cecece;
+    display: inline-block;
+}
+/* 尺码 */
+#main .detial_main .right ul{
     height:20px;
     line-height: 20px;
 }
-.right ul li{
+#main .detial_main .right ul li{
     float:left;
     box-sizing: border-box;
 }
-.right ul li:first-child{
+#main .detial_main .right ul li:first-child{
     height:25px;
     line-height: 25px;
     margin-right:10px;
 }
-.right ul li:not(:first-child){
+#main .detial_main .right ul li:not(:first-child){
     font-size:12px;
     width:25px;
     height:25px;
@@ -140,33 +149,54 @@
     margin-right:10px;
     border:1px solid #cecece;
 }
-.right ul li a{
+#main .detial_main .right ul li:not(:first-child):hover{
+    border:1px solid #b5181d;
+}
+.active{
+    border:1px solid #b5181d !important;
+}
+#main .detial_main .right ul li a{
     color:#000;
 }
-.right p button{
+/* 数量 */
+#main .detial_main .right p.count{
+    height:20px;
+    line-height: 20px;
+} 
+#main .detial_main .right p button{
+    margin-left:5px;
     width:20px;
     height: 20px;
     text-align: center;
-    line-height: 15px;
-    font-size:14px;
     border:1px solid #666;
-    background-color: #fff;
-    border-radius: 50%;
+    background-color: #cecece;
     outline: none;
-    margin:0 10px;
+    margin:0 5px; 
 }
-.right p input{
-    width:30px;
+#main .detial_main .right .count input{
+    width:40px;
     height:20px;
     outline: none;
-    padding:3px;
     font-size: 12px;
-    box-sizing: border-box;
+    text-align: center;
+    padding:3px;
+    border:1px solid #666;
+    position: relative;
+    top:-1px;
 }
-.right p span{
-    margin-left:10px;
+/* 已选颜色 */
+#main .detial_main .right p.select span{
+    margin-left:5px;
+    border:1px solid #b5181d;
+    width:60px;
+    height:30px;
+    padding:5px;
+    text-align: center;
+    display: inline-block;
 }
-.right .buy,.right .shopping{
+/* 立即购买 加入购物车 */
+#main .detial_main .right .buy,
+#main .detial_main .right .shopping{
     width:168px;
     height:33px;
     text-align: center;
@@ -176,26 +206,54 @@
     display: inline-block;
     margin-bottom: 20px;
 }
-.right .buy{
+#main .detial_main .right .buy{
     background-color:#f7abaf;
     color:#b5181d 
 }
-.right .shopping{
+#main .detial_main .right .shopping{
     background-color:#b5181d;
     color:#fff;
 }
+/* 优惠提示 */
+#main .detial_main .right .tips{
+    width:400px;
+    height:50px;
+    border-top: 1px solid #b5181d;
+    border-bottom:1px solid #b5181d;
+    padding-top:16px;
+    position: relative;
+}
+#main .detial_main .right .tips>span{
+    font-size:14px;
+    color:#b5181d;
+    background-color:#fff;
+    font-weight: bold;
+    padding:0 5px;
+    position: absolute;
+    top:-9px;
+    left:160px;
+}
+#main .detial_main .right .tips>p>span{
+    background-color: #b5181d;
+    color:#fff;
+    padding:0 5px;
+    margin-right:10px;
+
+}
+
 /* 详情介绍 */
-.detial_intr p,.detial_intr span{
+#main .detial_intr p,
+#main .detial_intr span{
     color:#666;
     font-size: 14px;
     font-weight: bold;
     margin-top:40px;
     margin-bottom: 5px;
 }
-.detial_intr span{
+#main .detial_intr span{
     font-weight: normal;
 }
-.detial_intr img{
+#main .detial_intr img{
     display: block;
 }
 

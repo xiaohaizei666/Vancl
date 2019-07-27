@@ -1,254 +1,376 @@
-*{padding: 0;margin:0;}
-/* 轮播图 */
-#banner{
+*{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+}
+/*导航菜单栏*/
+#nav{
     width:1200px;
-    height:535px;
     margin:0 auto;
-    overflow:hidden;
+    margin-top: 10px;
+    height:50px;
+    background:linear-gradient(to bottom,#e34051,#ff803d);
+}
+#nav ul{
+    height: 50px;
+}
+/*一级菜单栏*/
+#nav ul li{
+    float:left;
+    width:150px;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    font-size:16px;
     position:relative;
 }
-/* 过渡 */
-#ul-imgs.transition{
-    transition:all .5s linear;
-}
-#ul-imgs>li{
-    width:1200px;
-    float:left;
-}
-#ul-imgs img{
-    width:1200px;
-}
-/* 小圆点列表 */
-#ul-idxs{
-    width:125px;
-    margin:0 auto;
-    list-style:none;
-    position:absolute;
-    bottom:5px;
-    left:50%;
-    margin-left:-50px;
-}
-#ul-idxs>li{
-    float:left;
-    width:15px;
-    height:15px;
-    background-color:#cecece;
-    border-radius:50%;
-    margin:0 5px;
-    cursor:pointer;
-}
-#ul-idxs>li.active{
-    background-color:#b5181d;
-}
-/* 上下按钮 */
-#btn-left,#btn-right{
-    width:35px;
-    height:70px;
-    color:#fff;
-    font-size:24px;
+#nav>ul>li>a{
+    width:150px;
+    height:50px;
+    font-size:18px;
     font-weight:bold;
     text-align:center;
-    line-height:70px;
-    border-radius:5px;
-    background-color:rgba(0,0,0,0.5);
+    line-height:50px;
+    color:#fff;
+    display:block;
+}
+#nav>ul>li>a:hover{
+    color:#b5181d;
+    background-color:#eee;
+}
+
+/*二级菜单*/
+#nav>ul>li>ul{
+    clear:both;
+    width:150px;
     position:absolute;
-    top:50%;
-    margin-top:-35px;
-    cursor:pointer;
+    left:0;
+    z-index: 2;
 }
-#btn-left{
-    left:10px;
+/*设置二级菜单的li样式*/
+#nav>ul>li>ul>li{
+    width:150px;
+    height:40px;
 }
-#btn-right{
-    right:10px;
+#nav>ul>li>ul{
+    height:0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .5s linear;
 }
-#btn-left:hover,#btn-right:hover{
-    background-color:rgba(0,100,100,0.2);
+#nav>ul>li:nth-child(2):hover>ul{
+    opacity: 1;
+    height:240px;
 }
-/* 小圆点 */
-#icon{
-    width:1200px;
-    height:80px;
-    background:#fff;
-    margin:0 auto;
+#nav>ul>li:nth-child(3):hover>ul{
+    opacity: 1;
+    height:280px;
 }
-#icon ul{
+#nav>ul>li:nth-child(4):hover>ul{
+    opacity: 1;
+    height:240px;
+}
+#nav>ul>li:nth-child(5):hover>ul{
+    opacity: 1;
+    height:200px;
+}
+#nav>ul>li:nth-child(6):hover>ul{
+    opacity: 1;
+    height:120px;
+}
+#nav>ul>li:nth-child(7):hover>ul{
+    opacity: 1;
+    height:160px;
+}
+
+#nav>ul>li>ul>li>a{
+    width:150px;
+    height:40px;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
     text-align:center;
-    line-height:80px;
-    display:flex;
-    flex-flow:row nowrap;
-    justify-content:space-around;
+    background:rgba(0,0,0,0.3);
+    line-height:40px;
+    display:block;
 }
-#icon ul li img{
-    vertical-align:middle;
-    padding-right:15px;
+
+#nav>ul>li>ul>li>a:hover{
+  background:#c40000;
+}
+
+/* 轮播图 */
+#banner{
+	width:1200px;
+	height:535px;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+}
+/* 过渡 */
+#banner #ul-imgs.transition{
+	transition:all .5s linear;
+}
+#banner #ul-imgs>li{
+	width:1200px;
+	float:left;
+}
+#banner #ul-imgs img{
+	width:1200px;
+}
+/* 小圆点列表 */
+#banner #ul-idxs{
+	width:125px;
+	margin:0 auto;
+	list-style:none;
+	position:absolute;
+	bottom:5px;
+	left:50%;
+	margin-left:-50px;
+}
+#banner #ul-idxs>li{
+	float:left;
+	width:15px;
+	height:15px;
+	background-color:#cecece;
+	border-radius:50%;
+	margin:0 5px;
+	cursor:pointer;
+}
+#banner #ul-idxs>li.active{
+	background-color:#b5181d;
+}
+/* 上下按钮 */
+#banner #btn-left,#btn-right{
+	width:35px;
+	height:70px;
+	color:#fff;
+	font-size:24px;
+	font-weight:bold;
+	text-align:center;
+	line-height:70px;
+	border-radius:5px;
+	background-color:rgba(0,0,0,0.5);
+	position:absolute;
+	top:50%;
+	margin-top:-35px;
+	cursor:pointer;
+}
+#banner #btn-left{
+	left:10px;
+}
+#banner #btn-right{
+	right:10px;
+}
+#banner #btn-left:hover,#btn-right:hover{
+	background-color:rgba(0,100,100,0.2);
 }
 
 /*商品列表*/
 /*T恤*/
 section{
-    width:1200px;
-    margin:0 auto;
+	width:1200px;
+	margin:0 auto;
 }
 #section_top{
-    width:1200px;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-between;
+	width:1200px;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
 }
 #section_top .title{
-    width: 1200px;
-    height:60px;
-    line-height: 60px;
-    margin: 20px auto;
-    text-align: center;
-    background:linear-gradient(to right, #e34051,#ff803d);
-    position: relative;
+	width: 1200px;
+	height:60px;
+	line-height: 60px;
+	margin: 20px auto;
+	text-align: center;
+	background:linear-gradient(to right, #e34051,#ff803d);
+	position: relative;
 }
 #section_top .title h2{
-    color: #fff;
+	color: #fff;
 }
 #section_top .title a{
-    color:#fff;
-    position:absolute;
-    top:0px;
-    right:10px;
+	color:#fff;
+	position:absolute;
+	top:0px;
+	right:10px;
 }
 #section_top .product{
-    width:290px;
-    height:400px;
-    text-align: center;
-    border:1px solid #cecece;
-    margin:5px 0;
-    overflow: hidden;
-    transition: all 0.5s linear;
+	width:290px;
+	height:400px;
+	text-align: center;
+	border:1px solid #cecece;
+	margin:5px 0;
+	overflow: hidden;
+	transition: all 0.5s linear;
 }
 #section_top .product:hover{
-    border:1px solid #b5181d;
-    box-shadow:0 0 10px #9a9a9a;
-    transform: scale(1.02);
+	border:1px solid #b5181d;
+	box-shadow:0 0 10px #9a9a9a;
+	transform: scale(1.02);
 }
 #section_top .product img{
-    width:260px;
-    height:300px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+	width:260px;
+	height:300px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 #section_top .product .imgL{
-    transition: 1s linear;
+	transition: 1s linear;
 }
 #section_top .product .imgL:hover{
-    transform: scale(1.1);
+	transform: scale(1.1);
 }
 #section_top .product .price{
-    margin-top:10px;
-    color:#d80005;
-    font-size:18px;
-    font-weight:bold;
-    text-align:center;
+	margin-top:10px;
+	color:#d80005;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
 }
 #section_top .product .price span{
-    font-size:30px;
-    padding-left:5px;
+	font-size:30px;
+	padding-left:5px;
 }
 #section_top .product a h4{
-    color:#000;
-    font-size:18px;
-    text-align:center;
+	color:#000;
+	font-size:18px;
+	text-align:center;
 }
 /*优选推荐*/
-#section_middle h2,#section_bottom h2{
-    width:1200px;
-    height:50px;
-    color: #9a9a9a;
-    text-align: center;
-    margin: 30px 0;
-    border-bottom: 1px solid #cecece;
+#section_middle h2,
+#section_bottom h2{
+	width:1200px;
+	height:50px;
+	color: #9a9a9a;
+	text-align: center;
+	margin: 30px 0;
+	border-bottom: 1px solid #cecece;
 }
-.shirt{
-    width: 1200px;
-    height:480px;
-    box-sizing: border-box;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-between;
+#section_middle .shirt{
+	width: 1200px;
+	height:480px;
+	box-sizing: border-box;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
 }
-.shirt{
-    margin-bottom: 20px;
+#section_middle .shirt{
+	margin-bottom: 20px;
 }
-.shirt .left,.shirt .right{
-    text-align: center;
-    border:1px solid #cecece;
-    overflow: hidden;  
+#section_middle .shirt .left,
+#section_middle .shirt .right{
+	text-align: center;
+	border:1px solid #cecece;
+	overflow: hidden;  
 }
-.shirt .left:hover,
-.shirt .right:hover{
-    border: 1px solid #b5181d;
-    opacity: 0.8;
+#section_middle .shirt .left:hover,
+#section_middle .shirt .right:hover{
+	border: 1px solid #b5181d;
+	opacity: 0.8;
 }
-.shirt img{
-    display: block;
+#section_middle .shirt img{
+	display: block;
 }
-.shirt p{
-    height: 40px;
-    line-height: 40px;
-    font-size: 14px;
-    text-align: left;
-    padding:0 10px;
+#section_middle .shirt p{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	text-align: left;
+	padding:0 10px;
 }
-.shirt p a{
-    color:#b5181d;
-    float: right;
+#section_middle .shirt p a{
+	color:#b5181d;
+	float: right;
 }
-.shirt .center_top{
-    margin-bottom: 40px;
+#section_middle .shirt .center_top{
+	margin-bottom: 40px;
 }
-.shirt .center_top,.shirt .center_bottom{
-    border:1px solid #cecece;
+#section_middle .shirt .center_top,
+#section_middle .shirt .center_bottom{
+	border:1px solid #cecece;
 }
-.shirt .center_top:hover,
-.shirt .center_bottom:hover{
-    border:1px solid #b5181d;
-    opacity: 0.8;
+#section_middle .shirt .center_top:hover,
+#section_middle .shirt .center_bottom:hover{
+	border:1px solid #b5181d;
+	opacity: 0.8;
 }
 /*下装推荐*/
 #section_bottom{
-    width:1200px;
-    margin:0 auto;  
-    box-sizing: border-box;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-between;
-    margin-bottom:30px;
+	width:1200px;
+	margin:0 auto;  
+	box-sizing: border-box;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
+	margin-bottom:30px;
 }
 #section_bottom .pant{
-    width:285px;
-    height:480px;
-    border:1px solid #cecece;
-    overflow: hidden;
-    transition: all 0.5s linear;
+	width:285px;
+	height:480px;
+	border:1px solid #cecece;
+	overflow: hidden;
+	transition: all 0.5s linear;
 }
 #section_bottom .pant:hover{
-    border: 1px solid #b5181d;
-    box-shadow:0 0 20px #cecece;
-    transform: scale(1.02);
-    transform: translateY(-10px);   
+	border: 1px solid #b5181d;
+	box-shadow:0 0 20px #cecece;
+	transform: scale(1.02);
+	transform: translateY(-5px);   
 }
- .pant p{
-    width:285px;
-    height:40px;
-    line-height: 40px;
-    padding:0 10px;
-    box-sizing: border-box;
+#section_bottom .pant p{
+	width:285px;
+	height:40px;
+	line-height: 40px;
+	padding:0 10px;
+	box-sizing: border-box;
 }
-.pant p a{
-    color:#b5181d;
-    float: right;
+#section_bottom .pant p a{
+	color:#b5181d;
+	float: right;
 }
 
-
-
-
-
-
+/* 回到顶部 */
+#toTop{
+	width: 75px;
+	height: 285px;
+	border: 1px solid #b81b22;
+	position: fixed;
+	right: 0; 
+	bottom: 20px; 
+	z-index:10;
+	opacity: 0;
+	overflow: hidden;
+	transition: all .5s linear;
+}
+#toTop.show{
+	right:30px;
+	opacity:1;
+}
+#toTop ul li{
+	width:73px;
+	border-bottom:1px solid #b81b22;
+}
+#toTop ul li:last-child{
+	border-bottom:none;
+}
+#toTop ul li a{
+	display:block; 
+	width:73px;
+	height: 75px;
+}
+#toTop ul li.newPeople a{
+	background: url(../img/index/toTop.png) no-repeat -1px -1px ;
+}
+#toTop ul li.downApp a{
+	background: url(../img/index/toTop.png) no-repeat -1px -78px ;
+}
+#toTop ul li.online a{
+	background: url(../img/index/toTop.png) no-repeat -1px -155px ;
+}
+#toTop ul li.BackTop a{
+	height: 60px;
+	background: url(../img/index/toTop.png) no-repeat -1px -226px ;
+}
 

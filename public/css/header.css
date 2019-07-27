@@ -4,7 +4,6 @@ ul{
 }
 a{
     text-decoration: none;
-    color:#808080;
 }
 /*头部上部分*/
 .top{
@@ -25,6 +24,14 @@ a{
     font-size: 14px;
     float:left;
     margin-right: 10px;
+}
+.top .container>ul>li:nth-child(2)::after{
+    content:"|";
+    color:#cecece;
+    padding-left:10px;
+}
+.top .container>ul>li a{
+    color:#808080;
 }
 .top .container>ul>li a .wz{
     margin-right: 3px;
@@ -82,7 +89,10 @@ a{
     font-size: 12px;
     float: right;
 }
-.middle .search .shopCar img{
+.middle .shopCar a{
+    color:#fff;
+}
+.middle .search .shopCar a img{
     width: 20px;
     height:20px;
     vertical-align: middle;
@@ -95,117 +105,4 @@ a{
     margin-top: 5px;
     margin-left: 20px;
 }
-/*头部下部分*/
-.bottom{
-    width:1200px;
-    margin:0 auto;
-    margin-top: 10px;
-    height:50px;
-    background:linear-gradient(to bottom,#e34051,#ff803d);
-}
-.bottom ul{
-    height: 50px;
-}
-/*一级菜单栏*/
-.bottom ul li{
-    float:left;
-    width:150px;
-    height:50px;
-    text-align: center;
-    line-height: 50px;
-    font-size:16px;
-    position:relative;
-}
-.bottom>ul>li>a{
-    width:150px;
-    height:50px;
-    font-size:18px;
-    font-weight:bold;
-    text-align:center;
-    line-height:50px;
-    color:#fff;
-    display:block;
-}
-.bottom>ul>li>a:hover{
-    color:#b5181d;
-    background-color:#eee;
-}
-
-/*二级菜单*/
-.bottom>ul>li>ul{
-    clear:both;
-    width:150px;
-    position:absolute;
-    left:0;
-    z-index: 2;
-}
-/*设置二级菜单的li样式*/
-.bottom>ul>li>ul>li{
-    width:150px;
-    height:40px;
-}
-.bottom>ul>li>ul{
-    height:0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all .5s linear;
-}
-.bottom>ul>li:nth-child(2):hover>ul{
-    opacity: 1;
-    height:240px;
-}
-.bottom>ul>li:nth-child(3):hover>ul{
-    opacity: 1;
-    height:280px;
-}
-.bottom>ul>li:nth-child(4):hover>ul{
-    opacity: 1;
-    height:240px;
-}
-.bottom>ul>li:nth-child(5):hover>ul{
-    opacity: 1;
-    height:200px;
-}
-.bottom>ul>li:nth-child(6):hover>ul{
-    opacity: 1;
-    height:120px;
-}
-.bottom>ul>li:nth-child(7):hover>ul{
-    opacity: 1;
-    height:160px;
-}
-
-.bottom>ul>li>ul>li>a{
-    width:150px;
-    height:40px;
-    color:#fff;
-    font-size:16px;
-    font-weight:bold;
-    text-align:center;
-    background:rgba(0,0,0,0.3);
-    line-height:40px;
-    display:block;
-}
-
-.bottom>ul>li>ul>li>a:hover{
-    background:#c40000;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
